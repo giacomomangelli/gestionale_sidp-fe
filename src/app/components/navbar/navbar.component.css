@@ -1,0 +1,22 @@
+.img-profile {
+    height: 32px;
+    width: 32px;
+    margin-top: 5.5px;
+    margin-left: 20px;
+}
+
+.sign-in-button {
+    margin-top: 5.5px;
+    margin-left: 10px;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: smaller;
+    height: 30px;
+    width: 80px;
+}
+
+.button-box {
+    margin-left: 900px;
+}
