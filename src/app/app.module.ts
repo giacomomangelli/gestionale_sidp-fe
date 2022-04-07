@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from './app-routing.module';
 
-import { AppComponent } from './app.component';
-import { LandingPageComponent } from './pages/landing-page/landing-page.component';
-import { SharedModule } from "./components/shared.module";
-import { ContattiComponent } from './pages/contatti/contatti.component';
-import { SigninComponent } from './pages/signin/signin.component';
+import {AppComponent} from './app.component';
+import {LandingPageComponent} from './pages/landing-page/landing-page.component';
+import {ComponentsModule} from "./components/components.module";
+import {ContattiComponent} from './pages/contatti/contatti.component';
+import {SigninComponent} from './pages/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { SigninComponent } from './pages/signin/signin.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
