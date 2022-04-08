@@ -7,6 +7,9 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { SharedModule } from "./components/shared.module";
 import { ContattiComponent } from './pages/contatti/contatti.component';
 import { SigninComponent } from './pages/signin/signin.component';
+import { SignupComponent } from './pages/signup/signup.component';
+
+
 
 @NgModule({
   declarations: [
@@ -14,6 +17,7 @@ import { SigninComponent } from './pages/signin/signin.component';
     LandingPageComponent,
     ContattiComponent,
     SigninComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
