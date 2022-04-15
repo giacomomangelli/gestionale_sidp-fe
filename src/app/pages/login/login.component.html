@@ -1,35 +1,27 @@
 <div class="card" fxLayoutAlign="center center" fxFlexFill>
     <mat-card class="shadow-lg" style="background-color: #f0d9a7;" fxFlex="25">
         <div class="text-center">
-            <h1 class="mb-1">Sign-up</h1>
-            <p>Please enter your data</p>
+            <h1 class="mb-1">Login</h1>
+            <p>Please enter email & password</p>
         </div>
         <form>
             <div class="form-floating mb-3">
-                <input type="first name" class="form-control" id="floatingInput" placeholder="first name">
-                <label for="floatingInput">First name</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="last name" class="form-control" id="floatingInput" placeholder="last name">
-                <label for="floatingInput">Last name</label>
-            </div>
-            <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="floatingInput" placeholder="email">
                 <label for="floatingInput">Email</label>
+                <div id="emailHelp" style="color: black;" class="form-text">We'll never share your email with anyone
+                    else.</div>
             </div>
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="password">
                 <label for="floatingPassword">Password</label>
-                <div class="form-text"> Your password must be 8-20 characters long.</div>
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me
-                    out</label>
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button mat-raised-buttont style="color:white; background-color: #bf2033;" type="submit"
-                class="btn mb-3">Sign-up</button>
+                class="btn mb-3">Login</button>
         </form>
-        <a class="a" style="color: black;" routerLink="/login">Already registred? Click to login</a>
+        <a style="color: black;" routerLink="/signup">New User? Register now here</a>
     </mat-card>
 </div>

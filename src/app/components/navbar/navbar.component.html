@@ -1,14 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#ae9868">
   <div class="container-fluid">
-    <a href="landing"><img class="img-profile" style="height: 35px; width: 35px; margin-top: 5px"
+    <div class="collapse navbar-collapse justify-content-between">
+      <a class="navbar-brand" href="landing"><img class="img-profile" style="height: 35px; width: 35px; margin-top: 5px"
+          src="assets\img\logo.png" alt=""></a>
+    </div>
+
+    <a href="landing()"><img class="img-profile" style=" visibility: hidden; height: 35px; width: 35px; margin-top: 5px"
         src="assets\img\logo.png" alt=""></a>
-    <!-- sicuramente la parte (href="landing") è sbagliata però se mettevo il comando (click)=landing() non andava -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" style="margin-left: auto;" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-      <ul class="navbar-nav">
+    <!-- sicuramente la parte (href="landing") è sbagliata però se mettevo il comando (click)=landing() non andava -->
+
+    <div class="collapse navbar-collapse justify-content-between collapse" id="navbarNav">
+
+      <ul class="navbar-nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -33,12 +40,11 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-    </div>
-    <div class="collapse navbar-collapse justify-content-end">
-      <button class="btn btn-outline-dark" style="margin-right: 10px;" (click)="signup()">sign up</button>
-      <button class="btn btn-outline-dark" style="margin-right: 10px;" (click)="signin()">sign in</button>
-      <img class="img-profile" style="height: 32px; width: 32px; margin-top: 5px"
-        src="assets\img\profile-icon-png-898.png" alt="">
+      <div>
+        <button class="btn btn-outline-dark" style="margin-right: 10px;" (click)="signup()">sign up</button>
+        <a href="login()"><img class="border border-dark rounded-circle"
+            style="height: 32px; width: 32px; margin-top: 5px;" src="assets\img\profile-icon-png-898.png" alt=""></a>
+      </div>
     </div>
   </div>
 </nav>
