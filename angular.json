@@ -16,6 +16,15 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "it",
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -36,7 +45,8 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            ],
+            "i18nMissingTranslation": "error"
           },
           "configurations": {
             "production": {
@@ -60,6 +70,11 @@
               ],
               "outputHashing": "all"
             },
+            "en": {
+              "localize": [
+                "en"
+              ]
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -73,9 +88,18 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "gestionalesidp-fe:build"
+          },
           "configurations": {
             "production": {
-              "browserTarget": "gestionalesidp-fe:build:production"
+              "browserTarget": "gestionalesidp-fe:build"
+            },
+            "it": {
+              "browserTarget": "gestionalesidp-fe:build:it"
+            },
+            "en": {
+              "browserTarget": "gestionalesidp-fe:build:en"
             },
             "development": {
               "browserTarget": "gestionalesidp-fe:build:development"
