@@ -16,6 +16,15 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "it": {
+            "translation": "src/locale/messages.it.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -38,7 +47,8 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            ],
+            "i18nMissingTranslation": "error"
           },
           "configurations": {
             "production": {
@@ -85,13 +95,22 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "gestionalesidp-fe:build:production"
+              "browserTarget": "gestionalesidp-fe:build"
+            },
+            "it": {
+              "browserTarget": "gestionalesidp-fe:build:it"
             },
             "development": {
               "browserTarget": "gestionalesidp-fe:build:development"
             }
           },
           "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "gestionalesidp-fe:build"
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
