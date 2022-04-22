@@ -21,6 +21,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/gestionalesidp-fe",
+            "localize": false,
+            "aot": true,
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,6 +69,11 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "it": {
+              "localize": [
+                "it"
+              ]
             }
           },
           "defaultConfiguration": "production"
