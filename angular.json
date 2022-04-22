@@ -17,10 +17,10 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "it",
+        "sourceLocale": "en-US",
         "locales": {
-          "fr": {
-            "translation": "src/locale/messages.en.xlf",
+          "it": {
+            "translation": "src/locale/messages.it.xlf",
             "baseHref": ""
           }
         }
@@ -30,6 +30,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/gestionalesidp-fe",
+            "localize": false,
+            "aot": true,
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,11 +72,6 @@
               ],
               "outputHashing": "all"
             },
-            "en": {
-              "localize": [
-                "en"
-              ]
-            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -82,6 +79,11 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "it": {
+              "localize": [
+                "it"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -97,9 +99,6 @@
             },
             "it": {
               "browserTarget": "gestionalesidp-fe:build:it"
-            },
-            "en": {
-              "browserTarget": "gestionalesidp-fe:build:en"
             },
             "development": {
               "browserTarget": "gestionalesidp-fe:build:development"
