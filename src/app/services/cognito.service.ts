@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {BehaviorSubject} from 'rxjs';
-import {Amplify, Auth} from 'aws-amplify';
-import {environment} from '../../environments/environment';
-import {IUser} from '../models/IUser';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Amplify, Auth } from 'aws-amplify';
+import { environment } from '../../environments/environment';
+import { IUser } from '../models/IUser';
 
 @Injectable({
   providedIn: 'root'
